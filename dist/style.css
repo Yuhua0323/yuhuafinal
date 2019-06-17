@@ -1,0 +1,340 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  position: relative;
+  background-color: #fcf6ba;
+  box-sizing: border-box;
+  border-top: solid 30px #B6C8A9;
+  border-bottom: solid 30px #B6C8A9;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+.circle1 {
+  left: -130px;
+  top: 170px;
+  border: solid 15px;
+  width: 350px;
+  height: 350px;
+  color: #B6C8A9;
+  background-color: #C8EAD3;
+}
+
+.circle12 {
+  left: -105px;
+  top: 200px;
+  border: solid 5px;
+  width: 300px;
+  height: 300px;
+  color: #B6C8A9;
+  background-color: #CFFFE5;
+}
+
+.circle13 {
+  left: -100px;
+  top: 250px;
+  border: solid 40px;
+  width: 250px;
+  height: 250px;
+  color: #fcecc9;
+  background-color: #B6C8A9;
+}
+
+.circle2 {
+  left: 250px;
+  top: -50px;
+  border: solid 5px;
+  width: 100px;
+  height: 100px;
+  color: #B6C8A9;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.circle22 {
+  left: 265px;
+  top: -35px;
+  border: solid 10px;
+  width: 70px;
+  height: 70px;
+  color: #CFFFE5;
+  background-color: #CFFFE5;
+}
+
+.circle23 {
+  left: 280px;
+  top: -20px;
+  border: solid 4px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #B6C8A9;
+}
+
+.Top {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background-color: #cfffe5;
+  color: #695958;
+  border-radius: 30px 30px 225px 30px;
+  margin-top: -100px;
+  margin-left: -75px;
+  font-family: 'Anton', sans-serif;
+}
+.Top h3 {
+  margin-left: 100px;
+  margin-top: 100px;
+  font-size: 25px;
+  width: 100px;
+  line-height: 60px;
+}
+.Top h3 span {
+  background-color: white;
+  font-size: 30px;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  left: 100%;
+}
+
+.namecard {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  padding: 0px 20px 30px 20px;
+  overflow: hidden;
+  background-color: #CEDADA;
+  color: #695958;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 20px 25px 15px -15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: 微軟正黑體;
+  transition: 0.5s;
+}
+.namecard hr {
+  border-color: #695958;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+.namecard h2 {
+  font-size: 25px;
+}
+.namecard span {
+  font-size: 18px;
+}
+.namecard h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.screen h1 {
+  transition: 1s;
+}
+
+.namecard:hover {
+  transform: translate(-30px, -10px);
+  box-shadow: -20px -25px 15px -15px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes title {
+  0% {
+    margin-top: -200px;
+    margin-left: -300px;
+  }
+  50% {
+    margin-top: -75px;
+    margin-left: -50px;
+  }
+  100% {
+    margin-top: -100px;
+    margin-left: -75px;
+  }
+}
+.Top {
+  animation-name: title;
+  animation-duration: 1.5s;
+}
+
+.allbub {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  z-index: -3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #333;
+}
+@keyframes falling {
+  0%,100% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  0% {
+    transform: translate(100%, 0px);
+  }
+  100% {
+    transform: translate(0px, 100%);
+  }
+}
+.allbub [class*='bub'] {
+  background-color: #fff;
+  width: 2px;
+  height: 75px;
+  border-radius: 100px;
+  animation: falling 2s infinite;
+}
+.allbub .bub1 {
+  position: absolute;
+  left: 85.9717842808%;
+  top: 76.4399710752%;
+  animation-delay: -0.1s;
+}
+.allbub .bub2 {
+  position: absolute;
+  left: 86.1177442333%;
+  top: 12.9128903804%;
+  animation-delay: -0.2s;
+}
+.allbub .bub3 {
+  position: absolute;
+  left: 11.8249453476%;
+  top: 21.5331849668%;
+  animation-delay: -0.3s;
+}
+.allbub .bub4 {
+  position: absolute;
+  left: 24.8951292631%;
+  top: -3.7005002418%;
+  animation-delay: -0.4s;
+}
+.allbub .bub5 {
+  position: absolute;
+  left: 27.1457571106%;
+  top: 67.809734669%;
+  animation-delay: -0.5s;
+}
+.allbub .bub6 {
+  position: absolute;
+  left: 76.9612730725%;
+  top: 35.6320394538%;
+  animation-delay: -0.6s;
+}
+.allbub .bub7 {
+  position: absolute;
+  left: 45.6399128708%;
+  top: 17.1307840946%;
+  animation-delay: -0.7s;
+}
+.allbub .bub8 {
+  position: absolute;
+  left: 47.096227436%;
+  top: 61.0146231657%;
+  animation-delay: -0.8s;
+}
+.allbub .bub9 {
+  position: absolute;
+  left: 59.1420762154%;
+  top: 70.2012488893%;
+  animation-delay: -0.9s;
+}
+.allbub .bub10 {
+  position: absolute;
+  left: 52.4436878996%;
+  top: 37.8738866763%;
+  animation-delay: -1s;
+}
+.allbub .bub11 {
+  position: absolute;
+  left: 46.5244152526%;
+  top: 38.0087681387%;
+  animation-delay: -1.1s;
+}
+.allbub .bub12 {
+  position: absolute;
+  left: 74.9207808472%;
+  top: 1.7587488808%;
+  animation-delay: -1.2s;
+}
+.allbub .bub13 {
+  position: absolute;
+  left: 60.1962155455%;
+  top: 40.1920039501%;
+  animation-delay: -1.3s;
+}
+.allbub .bub14 {
+  position: absolute;
+  left: 59.5425443512%;
+  top: 33.5433955881%;
+  animation-delay: -1.4s;
+}
+.allbub .bub15 {
+  position: absolute;
+  left: 64.326966501%;
+  top: 23.8775874427%;
+  animation-delay: -1.5s;
+}
+.allbub .bub16 {
+  position: absolute;
+  left: 59.9908529943%;
+  top: 26.0860808798%;
+  animation-delay: -1.6s;
+}
+.allbub .bub17 {
+  position: absolute;
+  left: 34.9554400546%;
+  top: 6.7034173537%;
+  animation-delay: -1.7s;
+}
+.allbub .bub18 {
+  position: absolute;
+  left: 68.5186988627%;
+  top: 71.584251973%;
+  animation-delay: -1.8s;
+}
+.allbub .bub19 {
+  position: absolute;
+  left: 95.6819616088%;
+  top: 70.441750872%;
+  animation-delay: -1.9s;
+}
+.allbub .bub20 {
+  position: absolute;
+  left: 11.669679349%;
+  top: 58.9302214973%;
+  animation-delay: -2s;
+}
+
+@keyframes back {
+  0% {
+    background-color: #f9de8b;
+  }
+  50% {
+    background-color: #333;
+  }
+  100% {
+    background-color: #f9de8b;
+  }
+}
+.allbub {
+  animation: back 8s infinite;
+}

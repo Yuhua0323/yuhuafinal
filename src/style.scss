@@ -1,0 +1,249 @@
+$top_bgc:rgb(207, 255, 229);
+$top_color: #695958;
+$color1: rgb(100, 62, 127);
+$color2: rgb(228, 255, 28);
+$color3: rgb(68, 99, 117);
+$color4: rgb(61, 204, 106);
+$color5: rgb(224, 216, 62);
+
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  //border: solid 1px red;
+}
+body {
+  position: relative;
+  background-color: #fcf6ba;
+  box-sizing: border-box;
+  border-top: solid 30px #B6C8A9;
+  border-bottom: solid 30px #B6C8A9;
+  overflow: hidden;
+}
+.circle{
+  position: absolute;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+.circle1{
+  left: -130px;
+  top: 170px;
+  border: solid 15px;
+  width: 350px;
+  height: 350px;
+  color: #B6C8A9;
+  background-color: #C8EAD3;
+}
+
+
+.circle12{
+  left: -105px;
+  top: 200px;
+  border: solid 5px;
+  width: 300px;
+  height: 300px;
+  color: #B6C8A9;
+  background-color: #CFFFE5;
+ }
+  
+.circle13{
+  left: -100px;
+  top: 250px;
+  border: solid 40px;
+  width: 250px;
+  height: 250px;
+  color: rgba(252,236,201,1);
+  background-color: #B6C8A9;
+ }
+
+.circle2{
+  left: 250px;
+  top: -50px;
+  border: solid 5px;
+  width: 100px;
+  height: 100px;
+  color: #B6C8A9;
+  background-color: rgba(255,255,255,0.6);
+}
+
+.circle22{
+  left: 265px;
+  top: -35px;
+  border: solid 10px;
+  width: 70px;
+  height: 70px;
+  color: #CFFFE5;
+  background-color: #CFFFE5;
+  
+}
+
+.circle23{
+  left: 280px;
+  top: -20px;
+  border: solid 4px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #B6C8A9;
+  
+}
+
+.Top {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background-color: $top_bgc;
+  color: $top_color;
+  border-radius: 30px 30px 225px 30px;
+  margin-top: -100px;
+  margin-left: -75px;
+  font-family: 'Anton', sans-serif;
+  h3 {
+    margin-left: 100px;
+    margin-top: 100px;
+    font-size: 25px;
+    width: 100px;
+    line-height: 60px;
+    span{
+      background-color: white;
+      font-size: 30px;
+    }
+  }
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  left: 100%;
+}
+.namecard {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  padding: 0px 20px 30px 20px;
+  overflow: hidden;
+  background-color: #CEDADA;
+  color: #695958;
+  border: solid 1px rgba(0,0,0,0.15);
+  box-shadow: 20px 25px 15px -15px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  font-family: 微軟正黑體;
+  transition: 0.5s;
+  hr {
+    border-color: #695958;
+    margin-top: -15px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  span {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.screen h1 {
+  transition: 1s;
+}
+
+.namecard:hover{
+  transform: translate(-30px,-10px);
+  box-shadow: -20px -25px 15px -15px rgba(0,0,0,0.25);
+  
+}
+
+
+@keyframes title {
+  0% {
+    margin-top: -200px;
+    margin-left: -300px;
+  }
+  50% {
+    margin-top: -75px;
+    margin-left: -50px;
+  }
+  100% {
+    margin-top: -100px;
+    margin-left: -75px;
+  }
+}
+
+.Top {
+          animation-name: title;
+          animation-duration: 1.5s;
+}
+
+.allbub {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  z-index: -3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #333;
+
+
+  @keyframes falling {
+    0%,100% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 1;
+    }
+    0% {
+      transform: translate(100%, 0px);
+    }
+    100% {
+      transform: translate(0px, 100%);
+    }
+  }
+
+  [class*='bub'] {
+    background-color: #fff;
+    width: 2px;
+    height: 75px;
+    border-radius: 100px;
+    animation: falling 2s infinite;
+  }
+
+  @for $i from 1 through 20{
+    .bub#{$i} {
+      $posX: random()*100%;
+        $posY: random()*-100%+90%;  
+        position: absolute;
+        left: $posX;
+        top: $posY;
+        animation-delay: $i*-0.1s;      
+    }
+        
+  }
+   
+}
+
+
+@keyframes back {
+  0% {
+    background-color: #f9de8b;
+  }
+  50% {
+    background-color: #333;
+  }
+  100% {
+    background-color: #f9de8b;
+  }
+}
+
+.allbub {
+    animation: back 8s infinite;
+}
